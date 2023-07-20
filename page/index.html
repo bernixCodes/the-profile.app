@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/fav.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <span class="material-icons-outlined " id="edit">mode_edit </span>
+        <h3>Edit Profile</h3>
+        <span class="material-icons-outlined" id="logout">  logout</span>
+      </div>
+      <div class="main">
+        <div class="aside">
+          <div class="img-container">
+            <img src="../assets/profile.jpg" alt="profile" id="image" />
+            <span class="material-icons-outlined"> photo_camera </span>
+          </div>
+          <input type="file" id="imageInput" style="visibility: hidden;" />
+          <div class="user-details">
+            <div class="user_name">
+              <h3>Name</h3>
+              <h4>Adjoa Ernie</h4>
+            </div>
+            <div class="user_school">
+              <h3>School</h3>
+              <h4>University of Calgary</h4>
+            </div>
+            <div class="user_email">
+              <h3>Email</h3>
+              <h4>bernie@gmail.com</h4>
+            </div>
+            <div class="user_contact">
+              <h3>Emergency Contact</h3>
+              <h4>+233 59 401 0464</h4>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <form>
+            <div class="name">
+              <div class="f_name_input">
+                <label for="f_name">First Name</label>
+                <input type="text" placeholder="first name" id="f_name" class="input" />
+              </div>
+              <div class="l_name_input">
+                <label for="l_name">Last Name</label>
+                <input type="text" placeholder="last name" id="l_name" class="input"  />
+              </div>
+            </div>
+            <div class="school_input">
+              <label for="school">School</label>
+              <input type="text" placeholder="enter school" id="school" class="input" />
+            </div>
+            <div class="email_input">
+              <label for="email">Email</label>
+              <input type="text" placeholder="email" id="email" class="input"  />
+            </div>
+            <div class="contact_input">
+              <label for="contact"
+                ><span id="emergency_text">Emergency</span> Contact</label
+              >
+              <input type="text" placeholder="contact" id="contact" class="input"  />
+            </div>
+            <button type="submit" class="submit-update input">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  let emailParams = $(".user_email h4");
+  const url = window.location.search;
+  let email = new URLSearchParams(url).get("email");
+  console.log("email", email);
+  emailParams.text(email);
+
   const uploadButton = document.querySelector(".img-container span");
 
   uploadButton.addEventListener("click", function () {
@@ -17,6 +23,12 @@ $(document).ready(function () {
     });
   });
 
+  const logoutBtn = document.querySelector("#logout");
+  logoutBtn.style.cursor = "pointer";
+  logoutBtn.addEventListener("click", () => {
+    window.location.href = "../index.html";
+  });
+
   $(".submit-update").click(function (e) {
     e.preventDefault();
 
@@ -33,16 +45,16 @@ $(document).ready(function () {
     let email = $("input#email").val();
     let phone = $("input#contact").val();
 
-    student_name.text("Adjoa Ernie");
+    student_name.text("");
     student_name.text(first_name + " " + last_name);
 
-    student_school.text("University of Calgary");
+    student_school.text("");
     student_school.text(school_name);
 
-    student_email.text("bernie@gmail.com");
+    student_email.text("");
     student_email.text(email);
 
-    student_phone.text("+233 59 401 0464");
+    student_phone.text("4");
     student_phone.text(phone);
 
     const width = window.innerWidth;
@@ -83,4 +95,3 @@ $(document).ready(function () {
     }
   });
 });
-
