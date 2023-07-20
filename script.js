@@ -62,7 +62,7 @@ $(document).ready(function () {
           formContainer.classList.toggle("d-none");
           userDetails.style.display = "none";
         });
-      }, 1000);
+      }, 300);
     }
   });
 });
