@@ -49,20 +49,38 @@ $(document).ready(function () {
     console.log("width", width);
 
     if (width < 430) {
+      const header = document.querySelector(".header h3");
+      header.innerHTML = "Profile";
+
       const formContainer = document.querySelector(".form");
-      formContainer.classList.toggle("d-none");
-
+      const formItems = document.querySelectorAll(".input");
       const userDetails = document.querySelector(".aside .user-details");
-      userDetails.style.display = "flex";
-
       const editBtn = document.querySelector("#edit");
+
+      if ((formContainer.style.display = "flex")) {
+        formContainer.style.display = "none";
+        userDetails.style.display = "flex";
+      } else {
+        userDetails.style.display = "none";
+        formContainer.style.display = "flex";
+      }
+
       editBtn.style.cursor = "pointer";
-      setInterval(() => {
-        editBtn.addEventListener("click", () => {
-          formContainer.classList.toggle("d-none");
+
+      editBtn.addEventListener("click", () => {
+        if ((formContainer.style.display = "none")) {
+          formContainer.style.display = "flex";
+          formItems.forEach((item) => {
+            item.style.width = "70vw";
+          });
+
           userDetails.style.display = "none";
-        });
-      }, 300);
+        } else {
+          userDetails.style.display = "flex";
+          formContainer.style.display = "none";
+        }
+      });
     }
   });
 });
+
