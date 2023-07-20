@@ -16,20 +16,22 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <span class="material-icons-outlined">mode_edit </span>
+        <span class="material-icons-outlined " id="edit">mode_edit </span>
         <h3>Edit Profile</h3>
         <div></div>
       </div>
       <div class="main">
         <div class="aside">
           <div class="img-container">
-            <img src="./assets/profile.jpg" alt="profile" />
+            <img src="./assets/profile.jpg" alt="profile" id="image" />
             <span class="material-icons-outlined"> photo_camera </span>
           </div>
+          <input type="file" id="imageInput" style="visibility: hidden;" />
           <div class="user-details">
             <div class="user_name">
               <h3>Name</h3>
@@ -75,10 +77,11 @@
               >
               <input type="text" placeholder="contact" id="contact" />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit-update">Submit</button>
           </form>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
