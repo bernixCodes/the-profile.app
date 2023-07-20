@@ -175,6 +175,7 @@ label {
   }
   form .name {
     flex-direction: column;
+    gap: 30px;
   }
   .form button {
     margin-top: 10px;
