@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
         errorContainer.style.display = "none";
       }, 3000);
     } else {
-      window.location.href = `../page/index.html?email=${email.value}`;
+      window.location.href = `../main/index.html?email=${email.value}`;
     }
   });
 });
